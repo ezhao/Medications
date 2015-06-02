@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:padding="4dp"
+    android:padding="8dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -16,39 +16,32 @@
         android:id="@+id/tvDosage"
         tools:text="100 mg"
         android:textSize="18sp"
-        android:layout_below="@id/tvMedicationName"
+        android:gravity="end"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
-    <TextView
-        android:id="@+id/tvCondition"
-        tools:text="diabetes"
-        android:textSize="18sp"
-        android:layout_below="@id/tvMedicationName"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_toEndOf="@+id/tvMedicationName" />
 
     <TextView
         android:id="@+id/tvInstructions"
         tools:text="1 daily"
         android:textSize="18sp"
-        android:paddingLeft="20dp"
-        android:paddingRight="20dp"
+        android:gravity="end"
+        android:layout_marginTop="6dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toEndOf="@id/tvDosage"
-        android:layout_below="@+id/tvMedicationName" />
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/tvDosage"
+        android:layout_alignStart="@+id/tvDosage" />
 
     <TextView
-        android:id="@+id/tvSideEffects"
-        tools:text="itching, hives, swelling of face, swollen face, swelling of hands, swollen hands, swelling of mouth, swollen mouth, swelling of throat, swollen throat, …"
+        android:id="@+id/tvCondition"
+        tools:text="diabetes"
         android:textSize="18sp"
-        android:maxLines="8"
-        android:scrollbars="vertical"
-        android:layout_marginTop="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/tvDosage" />
+        android:layout_below="@+id/tvMedicationName"
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>

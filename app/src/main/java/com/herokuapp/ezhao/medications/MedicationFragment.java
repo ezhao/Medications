@@ -2,6 +2,7 @@ package com.herokuapp.ezhao.medications;
 
 import android.app.Fragment;
 import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,6 +16,7 @@ public class MedicationFragment extends Fragment {
     @InjectView(R.id.tvMedicationName) public TextView tvMedicationName;
     @InjectView(R.id.tvDosage) public TextView tvDosage;
     @InjectView(R.id.tvInstructions) public TextView tvInstructions;
+    @InjectView(R.id.tvCondition) public TextView tvCondition;
     @InjectView(R.id.tvSideEffects) public TextView tvSideEffects;
 
     public static MedicationFragment newInstance(Medication medication) {
@@ -40,8 +42,10 @@ public class MedicationFragment extends Fragment {
             tvMedicationName.setText(medication.getName());
             tvDosage.setText(medication.getDosage());
             tvInstructions.setText(medication.getInstructions());
+            tvCondition.setText(medication.getCondition());
             tvSideEffects.setText(medication.getSideEffects());
         }
+        tvSideEffects.setMovementMethod(new ScrollingMovementMethod());
 
         return view;
     }
