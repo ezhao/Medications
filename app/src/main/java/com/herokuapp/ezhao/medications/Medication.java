@@ -1,6 +1,8 @@
 package com.herokuapp.ezhao.medications;
 
-public class Medication {
+import java.io.Serializable;
+
+public class Medication implements Serializable {
     public String name;
     public String dosage;
     public String instructions;
